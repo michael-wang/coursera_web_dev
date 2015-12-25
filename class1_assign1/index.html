@@ -1,0 +1,110 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Planetary Fact</title>
+
+    <link rel="stylesheet" type="text/css" href="bootstrap.css"/>
+    <link rel="stylesheet" type="text/css" href="styles.css"/>
+    <script src="jquery-1.11.3.min.js"></script>
+    <script src="planets.js"></script>
+    <script src="main.js"></script>
+  </head>
+
+  <body>
+
+    <!-- Navigation bar on top of page. -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Planetary Fact</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="http://nssdc.gsfc.nasa.gov/planetary/factsheet/" target="_blank">Data Source</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container-fluid">
+      <div class="row">
+        <!-- Side bar: list of metrics. -->
+        <div class="col-sm-3 col-md-2 sidebar">
+          <ul class="nav nav-sidebar">
+            <li id="metric-0"><a href="#">Mass</a></li>
+            <li id="metric-1"><a href="#">Diameter</a></li>
+            <li id="metric-2"><a href="#">Gravity</a></li>
+            <li id="metric-3"><a href="#">Length of Day</a></li>
+            <li id="metric-4" class="active"><a href="#">Distance from Sun</a></li>
+            <li id="metric-5"><a href="#">Orbital Period</a></li>
+            <li id="metric-6"><a href="#">Number of Moons</a></li>
+          </ul>
+        </div> <!-- end of sidebar -->
+
+        <!-- Main content: show nine planets of the solar system,
+             sorted by metric selected in sidebar. -->
+        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+          <h1 class="page-header" id="rank_header">Rank by: </h1>
+
+          <div class="row placeholders">
+            <div class="col-md-4 placeholder" id="rank-0">
+              <img width="200" height="200" class="img-responsive">
+              <h3>Planet Name</h3>
+            </div>
+
+            <div class="col-md-4 placeholder" id="rank-1">
+              <img width="200" height="200" class="img-responsive">
+              <h3>Planet Name</h3>
+            </div>
+
+            <div class="col-md-4 placeholder" id="rank-2">
+              <img width="200" height="200" class="img-responsive">
+              <h3>Planet Name</h3>
+            </div>
+
+            <div class="col-md-4 placeholder" id="rank-3">
+              <img width="200" height="200" class="img-responsive">
+              <h3>Planet Name</h3>
+            </div>
+
+            <div class="col-md-4 placeholder" id="rank-4">
+              <img width="200" height="200" class="img-responsive">
+              <h3>Planet Name</h3>
+            </div>
+
+            <div class="col-md-4 placeholder" id="rank-5">
+              <img width="200" height="200" class="img-responsive">
+              <h3>Planet Name</h3>
+            </div>
+
+            <div class="col-md-4 placeholder" id="rank-6">
+              <img width="200" height="200" class="img-responsive">
+              <h3>Planet Name</h3>
+            </div>
+
+            <div class="col-md-4 placeholder" id="rank-7">
+              <img width="200" height="200" class="img-responsive">
+              <h3>Planet Name</h3>
+            </div>
+
+            <div class="col-md-4 placeholder" id="rank-8">
+              <img width="200" height="200" class="img-responsive">
+              <h3>Planet Name</h3>
+            </div>
+
+          </div> <!-- end of row -->
+        </div> <!-- end of main -->
+
+      </div> <!-- end of row -->
+    </div> <!-- end of container -->
+  </body>
+</html>
