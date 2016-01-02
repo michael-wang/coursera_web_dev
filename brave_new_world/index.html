@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en"> 
+  <head>
+   <title>Brave New World</title>
+
+    <link href="css/bootstrap_paper.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <script src="js/jquery-1.11.3.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/content.js"></script>
+    <script src="js/handlebars-v4.0.5.js"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+  </head>
+  
+  <body>
+    <div class="container">
+      <h1>Brave New World</h1>
+      <blockquote>
+        <p>by Aldous Huxley</p>
+      </blockquote>
+
+      <div class="container-fluid" id="content">
+      </div>
+    </div>
+
+    <script id="content-template" type="text/x-handlebars-template">
+      <div class="row">
+        {{#each chapters}}
+        <div class="col-xs-12 col-md-12">
+          <div class="panel panel-default">
+            <div class="panel-heading">{{chapter}}</div>
+            <p class="panel-body">{{{summary}}}</p>
+          </div>
+        </div>
+        {{/each}}
+      </div>
+    </script>
+
+    <script type="text/javascript">
+      var source = $("#content-template").html();
+      var content_template = Handlebars.compile(source);
+      var content_html = content_template(content);
+      console.log(content_html);
+
+      $("#content").append(content_html);
+    </script>
+
+  </body>
+</html>
