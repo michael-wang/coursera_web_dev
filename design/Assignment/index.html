@@ -49,7 +49,7 @@
 <script id="category-template" type="text/x-handlebars-template">
   <div class="row">
     {{#each category}}
-    <div class="col-sm-6 col-md-4">
+    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
       <div class="thumbnail well">
         <a href="#" class="animals-entry" data-id="{{@index}}">
           <img src="{{thumbnail}}" alt="{{name}}">
@@ -67,7 +67,7 @@
 <script id="animals-template" type="text/x-handlebars-template">
   <div class="row">
     {{#each animals}}
-    <div class="col-sm-6 col-md-4">
+    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
       <div class="thumbnail well">
         <a href="#" class="animal-entry" data-id="{{@index}}">
           <img src="{{image1}}" alt="{{name}}">
@@ -84,14 +84,14 @@
 <script id="animal-template" type="text/x-handlebars-template">
   <div class="jumbotron">
     <div class="row">
-      <div class="col-sm-6 col-md-4">
+      <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
         <div class="thumbnail">
           <a href="{{image1}}" class="modal-entry">
             <img src="{{image1}}" alt="{{name}}">
           </a>
         </div><!-- thumbnail -->
       </div><!-- col -->
-      <div class="col-sm-6 col-md-4">
+      <div class="col-xs-12 col-sm-6 col-md-4">
         <div class="thumbnail">
           <a href="{{image2}}" class="modal-entry">
             <img src="{{image2}}" alt="{{name}}">
@@ -99,7 +99,7 @@
         </div><!-- thumbnail -->
       </div><!-- col -->
     </div><!-- row -->
-    <p class="text-muted"><small>(Click image to view large image)</small></p>
+    <p class="text-muted"><small>(Click to view large image)</small></p>
     <h3>{{name}}</h3>
     <p>{{description}}</p>
   </div><!-- jumbotron -->
